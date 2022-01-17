@@ -4,5 +4,3 @@ include:
 
 variables:
   SOURCE_NAME: cyrus-sasl2
-  # We can't cross-build right now, disable arm64 because of that
-  BUILD_ARCH_ARM64: ''
