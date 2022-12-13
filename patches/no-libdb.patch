@@ -1,19 +1,17 @@
 Subject: Don't require libdb
 
---- cyrus-sasl2-2.1.27+dfsg.orig/debian/control	2020-05-24 23:20:41.284611261 +0000
-+++ cyrus-sasl2-2.1.27+dfsg/debian/control	2020-05-24 23:21:18.356744248 +0000
++++ a/debian/control
 @@ -14,7 +14,7 @@
                 groff-base,
                 heimdal-multidev <!pkg.cyrus-sasl2.nogssapi>,
                 krb5-multidev <!pkg.cyrus-sasl2.nogssapi>,
 -               libdb-dev,
 +               libgdbm-dev,
+                libcrypt-dev,
                 libkrb5-dev <!pkg.cyrus-sasl2.nogssapi>,
                 libldap2-dev <!pkg.cyrus-sasl2.noldap>,
-                libpam0g-dev,
---- cyrus-sasl2-2.1.27+dfsg.orig/debian/rules	2020-05-24 23:20:11.524504532 +0000
-+++ cyrus-sasl2-2.1.27+dfsg/debian/rules	2020-05-24 23:20:31.588576486 +0000
-@@ -89,6 +89,7 @@
++++ a/debian/rules
+@@ -94,6 +94,7 @@
  	--enable-ntlm \
  	--disable-passdss \
  	$(CONFIGURE_SQL) \
